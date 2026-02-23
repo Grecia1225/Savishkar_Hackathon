@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SchemeSathi - Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f8f9fa; }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4 text-center" data-en="Enter Your Details" data-hi="अपनी जानकारी दर्ज करें">Enter Your Details</h2>
+
+    <!-- Language selection -->
+    <div class="col-12 text-center mb-3">
+        <label class="form-label" data-en="Select Language" data-hi="भाषा चुनें">Select Language:</label>
+        <select id="languageSelect" class="form-select w-25 mx-auto">
+            <option value="en">English</option>
+            <option value="hi">हिंदी</option>
+        </select>
+    </div>
+
+    <form method="POST" class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label" data-en="Age" data-hi="उम्र">Age</label>
+            <input name="age" type="number" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label" data-en="Gender" data-hi="लिंग">Gender</label>
+            <select name="gender" class="form-select" required>
+                <option data-en="Male" data-hi="पुरुष">Male</option>
+                <option data-en="Female" data-hi="महिला">Female</option>
+                <option data-en="Other" data-hi="अन्य">Other</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label" data-en="Income" data-hi="आय">Income</label>
+            <input name="income" type="number" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label" data-en="State" data-hi="राज्य">State</label>
+            <input name="state" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label" data-en="Category" data-hi="श्रेणी">Category</label>
+            <select name="category" class="form-select" required>
+                <option data-en="General" data-hi="सामान्य">General</option>
+                <option data-en="OBC" data-hi="अनुसूचित जाति/अन्य पिछड़ा वर्ग">OBC</option>
+                <option data-en="SC" data-hi="अनुसूचित जाति">SC</option>
+                <option data-en="ST" data-hi="अनुसूचित जनजाति">ST</option>
+                <option data-en="EWS" data-hi="आर्थिक रूप से कमजोर वर्ग">EWS</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label" data-en="Occupation" data-hi="व्यवसाय">Occupation</label>
+            <select name="occupation" class="form-select" required>
+                <option data-en="Farmer" data-hi="किसान">Farmer</option>
+                <option data-en="Student" data-hi="छात्र">Student</option>
+                <option data-en="Unemployed" data-hi="बेरोज़गार">Unemployed</option>
+                <option data-en="Self-employed" data-hi="स्व-रोज़गार">Self-employed</option>
+                <option data-en="Senior Citizen" data-hi="वरिष्ठ नागरिक">Senior Citizen</option>
+                <option data-en="Homemaker" data-hi="गृहिणी">Homemaker</option>
+            </select>
+        </div>
+
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-success btn-lg mt-3" data-en="Submit" data-hi="जमा करें">Submit</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    const languageSelect = document.getElementById('languageSelect');
+
+    languageSelect.addEventListener('change', function() {
+        const lang = this.value;
+
+        // Update all elements with data-en / data-hi attributes
+        document.querySelectorAll('[data-en]').forEach(el => {
+            if(el.tagName === 'OPTION') {
+                // For select options
+                el.innerText = el.getAttribute('data-' + lang);
+            } else {
+                // For labels, headings, buttons
+                el.innerText = el.getAttribute('data-' + lang);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
