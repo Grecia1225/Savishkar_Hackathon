@@ -1,0 +1,212 @@
+/* SchemeSathi - shared styles */
+
+:root {
+  --saffron: #FF9933;
+  --white: #FFFFFF;
+  --india-green: #138808;
+  --navy: #14213D;
+  --text-dark: #1c1c1c;
+  --bg-light: #f5f6f8;
+  --border-light: #e2e4e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* tricolor strip at the very top of every page */
+.tricolor-strip {
+  height: 6px;
+  width: 100%;
+  display: flex;
+}
+.tricolor-strip div {
+  flex: 1;
+}
+.tricolor-strip .saffron { background: var(--saffron); }
+.tricolor-strip .white { background: var(--white); border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.tricolor-strip .green { background: var(--india-green); }
+
+/* top navy header bar */
+.site-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 18px 20px;
+  text-align: center;
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.site-header p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: #cfd6e6;
+}
+
+.page-wrap {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+/* home page */
+.hero {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 50px 30px;
+  text-align: center;
+}
+.hero h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: var(--navy);
+}
+.hero p {
+  color: #555;
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary-custom {
+  background: var(--india-green);
+  color: var(--white);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn-primary-custom:hover {
+  background: #0f6b06;
+  color: var(--white);
+}
+
+/* form card */
+.form-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 35px;
+}
+.form-card h2 {
+  color: var(--navy);
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.lang-row {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.lang-row select {
+  width: auto;
+  min-width: 160px;
+  display: inline-block;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.form-control, .form-select {
+  border: 1px solid #ccc;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--india-green);
+  box-shadow: none;
+}
+
+.submit-row {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* results page */
+.results-title {
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.scheme-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--saffron);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+.scheme-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.scheme-benefit {
+  color: #444;
+  margin-bottom: 12px;
+}
+.apply-btn {
+  background: var(--india-green);
+  color: var(--white);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+.apply-btn:hover {
+  background: #0f6b06;
+  color: var(--white);
+}
+
+.no-schemes {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #a13a2f;
+  background: #fdf1ef;
+  border: 1px solid #f3d3cd;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 8px 20px;
+  background: #6c757d;
+  color: var(--white);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.back-btn:hover {
+  background: #5a6169;
+  color: var(--white);
+}
+
+footer.site-footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.8rem;
+  padding: 20px;
+}

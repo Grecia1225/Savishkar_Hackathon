@@ -1,14 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>SchemeSathi</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
 </head>
-<body class="bg-light">
-<div class="container mt-5 text-center">
-    <h1 class="mb-4">Welcome to SchemeSathi</h1>
-    <p class="lead mb-4">Find government schemes you are eligible for based on your profile.</p>
-    <a href="/profile" class="btn btn-primary btn-lg">Check Eligibility</a>
-</div>
+<body>
+
+    <div class="tricolor-strip">
+        <div class="saffron"></div>
+        <div class="white"></div>
+        <div class="green"></div>
+    </div>
+
+    <div class="site-header">
+        <h1>SchemeSathi</h1>
+        <p>Helping citizens find the government schemes they qualify for</p>
+    </div>
+
+    <div class="page-wrap">
+        <div class="hero">
+            <h2>Welcome</h2>
+            <p>Answer a few quick questions about yourself and we'll show you the government schemes you may be eligible for.</p>
+            <a href="/profile" class="btn-primary-custom">Check Eligibility</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        SchemeSathi &mdash; built to make government scheme discovery simpler.
+    </footer>
+
 </body>
 </html>
